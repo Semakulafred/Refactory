@@ -1,6 +1,43 @@
-{% extends "base.html" %}
+{% extends "pages/base.html" %}
 {% load static %}
 
-{% block content %}
+{% block content %} <br><br>
 
+<div class="container" style="color: white; align-items:center;">
+    <div class="single-product">
+        <div >
+            <div class="col-6">
+                <br><br><br><br>
+                <div class="product-image">
+                    <div class="product-image-main">
+                        <img src="{% static 'pages/images/rice.jpg' %}" alt="" id="product-main-image">
+                    </div>
+                </div>
+            </div>
+
+                <div class="product">
+                    <div class="product-title">
+                        <h2>Fresh Basmat Rice</h2>
+                    </div>
+                    <div class="product-price">
+                        <span class="offer-price">Shs 10,000</span>
+                    </div>
+
+                    <div class="product-details">
+                        <h3>Description</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos est magnam quibusdam maiores sit perferendis minima cupiditate iusto earum repudiandae maxime vitae nostrum, ea cumque iste ipsa hic commodi tempore.</p>
+                    </div>
+                    </div>
+                    <span class="divider"></span>
+
+                    <div class="btn btn-danger">
+                        <div class="button buy-now"><i class='bx bxs-zap' ></i> Make Sale</div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br>
 {% endblock  %}

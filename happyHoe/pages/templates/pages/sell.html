@@ -1,6 +1,36 @@
-{% extends "base.html" %}
+{% extends "pages/base.html" %}
 {% load static %}
 
 {% block content %}
+<br><br><br><br><br><br>
+<div class="containerone">
+    <form action=""style="height: 850px; margin-top:250px;">      <!--Location of Server-->
+        <h1 class="main-heading">PAYMENT FORM</h1>
+        <hr>
+        <p>* indicates a required field</p>
+        <h2>User Information</h2>
+        <div>Name: *<input type="text" name="name" placeholder="Customer Name" required></div>
+        <div>
+            Address: <input name="address" id="address" cols="70" rows="10"
+                placeholder="Enter Address"></input>
+        </div>
+        <div>
+            Email: * <input type="email" name="email" id="email" placeholder="abc@gmail.com" required>
+        </div>
+        <hr>
 
+        <h2>Product Details</h2>
+        <div>Name: <input type="text" name="name" placeholder="Product Name" required></div>
+        <div>
+            Quantity: <input name="address" id="address" cols="70" rows="10"
+                placeholder="Quantity"></input>
+        </div>
+        <div>
+            Total Price: <div type="number" name="TotalPrice" placeholder="Total Price" required></div>
+        </div>
+        <hr>
+        <a href="{% url 'reciept' %}"style="text-decoration:none;"><input type="submit" value="Make Cash Sale"></a>
+    </form>
+</div>
+<br><br><br><br><br>
 {% endblock  %}

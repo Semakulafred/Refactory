@@ -1,0 +1,45 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+<form method="POST" action="#" style="margin-top: 250px; height:990px;">
+    {% csrf_token %}
+   
+    <h3>Signup Here</h3>
+
+    <label for="firstname">First Name</label>
+    <input type="text" placeholder="First Name" id="username" name= "firstname">
+
+    <label for="lastname">Lastname</label>
+    <input type="text" placeholder="Last name" id="username" name="lastname">
+
+    <label for="username">Username</label>
+    <input type="text" placeholder="username" id="username" name="username">
+
+    <label for="username">Email</label>
+    <input type="text" placeholder="Email" id="email" name="email">
+
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" id="password" name="password">
+
+    <label for="password">Confirm Password</label>
+    <input type="password" placeholder="confirmpassword" id="password" name="confirmpassword">
+    <button>Signup</button>
+    <div class="social">
+      
+    </div>
+    <div class="errors">
+        {% if messages %}
+        {% for message in messages %}
+        <h2 style="color:red; text-align: center;">{{message}}</h2>
+        {% endfor %}
+        {% endif %}
+    </div>
+</form>
+
+{% endblock  %}
